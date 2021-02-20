@@ -31,5 +31,11 @@ namespace pract_19
             this.теннесистыTableAdapter.Fill(this.tennisDataSet.Теннесисты);
 
         }
+
+        private void AddRecord_Click(object sender, EventArgs e)
+        {
+            AddRecords records = new AddRecords();
+            records.ShowDialog();
+        }
     }
 }

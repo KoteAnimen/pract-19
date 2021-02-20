@@ -200,6 +200,9 @@
             // 
             this.полComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.теннесистыBindingSource, "Пол", true));
             this.полComboBox.FormattingEnabled = true;
+            this.полComboBox.Items.AddRange(new object[] {
+            "Муж",
+            "Жен"});
             this.полComboBox.Location = new System.Drawing.Point(158, 102);
             this.полComboBox.Name = "полComboBox";
             this.полComboBox.Size = new System.Drawing.Size(72, 21);

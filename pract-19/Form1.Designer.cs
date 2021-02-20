@@ -115,6 +115,7 @@
             this.AddRecord.Name = "AddRecord";
             this.AddRecord.Size = new System.Drawing.Size(189, 22);
             this.AddRecord.Text = "Добавить запись";
+            this.AddRecord.Click += new System.EventHandler(this.AddRecord_Click);
             // 
             // SearchChange
             // 
