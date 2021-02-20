@@ -33,11 +33,11 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.справкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.добавитьЗаписьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.найтиИИзменитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.удалитьЗаписьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.количествоЖенщинToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.количествоМужчинToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.AddRecord = new System.Windows.Forms.ToolStripMenuItem();
+            this.SearchChange = new System.Windows.Forms.ToolStripMenuItem();
+            this.DeleteRecord = new System.Windows.Forms.ToolStripMenuItem();
+            this.CountWoman = new System.Windows.Forms.ToolStripMenuItem();
+            this.CountMan = new System.Windows.Forms.ToolStripMenuItem();
             this.tennisDataSet = new pract_19.TennisDataSet();
             this.теннесистыBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.теннесистыTableAdapter = new pract_19.TennisDataSetTableAdapters.ТеннесистыTableAdapter();
@@ -70,6 +70,7 @@
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AboutUs = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tennisDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.теннесистыBindingSource)).BeginInit();
@@ -92,50 +93,52 @@
             // файлToolStripMenuItem
             // 
             this.файлToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.добавитьЗаписьToolStripMenuItem,
-            this.найтиИИзменитьToolStripMenuItem,
-            this.удалитьЗаписьToolStripMenuItem,
-            this.количествоЖенщинToolStripMenuItem,
-            this.количествоМужчинToolStripMenuItem});
+            this.AddRecord,
+            this.SearchChange,
+            this.DeleteRecord,
+            this.CountWoman,
+            this.CountMan});
             this.файлToolStripMenuItem.Name = "файлToolStripMenuItem";
             this.файлToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
             this.файлToolStripMenuItem.Text = "Запросы";
             // 
             // справкаToolStripMenuItem
             // 
+            this.справкаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.AboutUs});
             this.справкаToolStripMenuItem.Name = "справкаToolStripMenuItem";
             this.справкаToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
             this.справкаToolStripMenuItem.Text = "Справка";
             // 
-            // добавитьЗаписьToolStripMenuItem
+            // AddRecord
             // 
-            this.добавитьЗаписьToolStripMenuItem.Name = "добавитьЗаписьToolStripMenuItem";
-            this.добавитьЗаписьToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
-            this.добавитьЗаписьToolStripMenuItem.Text = "Добавить запись";
+            this.AddRecord.Name = "AddRecord";
+            this.AddRecord.Size = new System.Drawing.Size(189, 22);
+            this.AddRecord.Text = "Добавить запись";
             // 
-            // найтиИИзменитьToolStripMenuItem
+            // SearchChange
             // 
-            this.найтиИИзменитьToolStripMenuItem.Name = "найтиИИзменитьToolStripMenuItem";
-            this.найтиИИзменитьToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
-            this.найтиИИзменитьToolStripMenuItem.Text = "Найти и изменить";
+            this.SearchChange.Name = "SearchChange";
+            this.SearchChange.Size = new System.Drawing.Size(189, 22);
+            this.SearchChange.Text = "Найти и изменить";
             // 
-            // удалитьЗаписьToolStripMenuItem
+            // DeleteRecord
             // 
-            this.удалитьЗаписьToolStripMenuItem.Name = "удалитьЗаписьToolStripMenuItem";
-            this.удалитьЗаписьToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
-            this.удалитьЗаписьToolStripMenuItem.Text = "Удалить запись";
+            this.DeleteRecord.Name = "DeleteRecord";
+            this.DeleteRecord.Size = new System.Drawing.Size(189, 22);
+            this.DeleteRecord.Text = "Удалить запись";
             // 
-            // количествоЖенщинToolStripMenuItem
+            // CountWoman
             // 
-            this.количествоЖенщинToolStripMenuItem.Name = "количествоЖенщинToolStripMenuItem";
-            this.количествоЖенщинToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
-            this.количествоЖенщинToolStripMenuItem.Text = "Количество женщин";
+            this.CountWoman.Name = "CountWoman";
+            this.CountWoman.Size = new System.Drawing.Size(189, 22);
+            this.CountWoman.Text = "Количество женщин";
             // 
-            // количествоМужчинToolStripMenuItem
+            // CountMan
             // 
-            this.количествоМужчинToolStripMenuItem.Name = "количествоМужчинToolStripMenuItem";
-            this.количествоМужчинToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
-            this.количествоМужчинToolStripMenuItem.Text = "Количество мужчин";
+            this.CountMan.Name = "CountMan";
+            this.CountMan.Size = new System.Drawing.Size(189, 22);
+            this.CountMan.Text = "Количество мужчин";
             // 
             // tennisDataSet
             // 
@@ -214,6 +217,7 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Положение";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -222,14 +226,14 @@
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(43, 15);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(43, 22);
             this.bindingNavigatorCountItem.Text = "для {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Общее число элементов";
             // 
             // bindingNavigatorSeparator1
             // 
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 6);
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -237,7 +241,7 @@
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveNextItem.Text = "Переместить вперед";
             // 
             // bindingNavigatorMoveLastItem
@@ -246,13 +250,13 @@
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveLastItem.Text = "Переместить в конец";
             // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 6);
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorAddNewItem
             // 
@@ -269,7 +273,7 @@
             this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
             this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorDeleteItem.Text = "Удалить";
             // 
             // теннесистыBindingNavigatorSaveItem
@@ -277,7 +281,7 @@
             this.теннесистыBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.теннесистыBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("теннесистыBindingNavigatorSaveItem.Image")));
             this.теннесистыBindingNavigatorSaveItem.Name = "теннесистыBindingNavigatorSaveItem";
-            this.теннесистыBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 23);
+            this.теннесистыBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
             this.теннесистыBindingNavigatorSaveItem.Text = "Сохранить данные";
             this.теннесистыBindingNavigatorSaveItem.Click += new System.EventHandler(this.теннесистыBindingNavigatorSaveItem_Click);
             // 
@@ -394,6 +398,12 @@
             this.dataGridViewTextBoxColumn14.HeaderText = "Рейтинг5Года";
             this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
             // 
+            // AboutUs
+            // 
+            this.AboutUs.Name = "AboutUs";
+            this.AboutUs.Size = new System.Drawing.Size(180, 22);
+            this.AboutUs.Text = "О программе";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -423,11 +433,11 @@
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem файлToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem добавитьЗаписьToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem найтиИИзменитьToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem удалитьЗаписьToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem количествоЖенщинToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem количествоМужчинToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem AddRecord;
+        private System.Windows.Forms.ToolStripMenuItem SearchChange;
+        private System.Windows.Forms.ToolStripMenuItem DeleteRecord;
+        private System.Windows.Forms.ToolStripMenuItem CountWoman;
+        private System.Windows.Forms.ToolStripMenuItem CountMan;
         private System.Windows.Forms.ToolStripMenuItem справкаToolStripMenuItem;
         private TennisDataSet tennisDataSet;
         private System.Windows.Forms.BindingSource теннесистыBindingSource;
@@ -461,6 +471,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+        private System.Windows.Forms.ToolStripMenuItem AboutUs;
     }
 }
 
