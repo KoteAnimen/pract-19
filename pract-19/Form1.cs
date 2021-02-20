@@ -36,6 +36,11 @@ namespace pract_19
         {
             AddRecords records = new AddRecords();
             records.ShowDialog();
+            int row, col;
+            row = теннесистыDataGridView.CurrentCell.RowIndex;
+            col = теннесистыDataGridView.CurrentCell.ColumnIndex;
+            this.теннесистыTableAdapter.Fill(this.tennisDataSet.Теннесисты);
+            теннесистыDataGridView.CurrentCell = теннесистыDataGridView[col, row];
         }
     }
 }

@@ -32,28 +32,25 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.справкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.AddRecord = new System.Windows.Forms.ToolStripMenuItem();
             this.SearchChange = new System.Windows.Forms.ToolStripMenuItem();
             this.DeleteRecord = new System.Windows.Forms.ToolStripMenuItem();
             this.CountWoman = new System.Windows.Forms.ToolStripMenuItem();
             this.CountMan = new System.Windows.Forms.ToolStripMenuItem();
-            this.tennisDataSet = new pract_19.TennisDataSet();
-            this.теннесистыBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.теннесистыTableAdapter = new pract_19.TennisDataSetTableAdapters.ТеннесистыTableAdapter();
-            this.tableAdapterManager = new pract_19.TennisDataSetTableAdapters.TableAdapterManager();
+            this.справкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.AboutUs = new System.Windows.Forms.ToolStripMenuItem();
             this.теннесистыBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.теннесистыBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.теннесистыDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -70,13 +67,16 @@
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AboutUs = new System.Windows.Forms.ToolStripMenuItem();
+            this.теннесистыBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tennisDataSet = new pract_19.TennisDataSet();
+            this.теннесистыTableAdapter = new pract_19.TennisDataSetTableAdapters.ТеннесистыTableAdapter();
+            this.tableAdapterManager = new pract_19.TennisDataSetTableAdapters.TableAdapterManager();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tennisDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.теннесистыBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.теннесистыBindingNavigator)).BeginInit();
             this.теннесистыBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.теннесистыDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.теннесистыBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tennisDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -86,7 +86,7 @@
             this.справкаToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1378, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1362, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -101,14 +101,6 @@
             this.файлToolStripMenuItem.Name = "файлToolStripMenuItem";
             this.файлToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
             this.файлToolStripMenuItem.Text = "Запросы";
-            // 
-            // справкаToolStripMenuItem
-            // 
-            this.справкаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.AboutUs});
-            this.справкаToolStripMenuItem.Name = "справкаToolStripMenuItem";
-            this.справкаToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
-            this.справкаToolStripMenuItem.Text = "Справка";
             // 
             // AddRecord
             // 
@@ -141,25 +133,19 @@
             this.CountMan.Size = new System.Drawing.Size(189, 22);
             this.CountMan.Text = "Количество мужчин";
             // 
-            // tennisDataSet
+            // справкаToolStripMenuItem
             // 
-            this.tennisDataSet.DataSetName = "TennisDataSet";
-            this.tennisDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.справкаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.AboutUs});
+            this.справкаToolStripMenuItem.Name = "справкаToolStripMenuItem";
+            this.справкаToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
+            this.справкаToolStripMenuItem.Text = "Справка";
             // 
-            // теннесистыBindingSource
+            // AboutUs
             // 
-            this.теннесистыBindingSource.DataMember = "Теннесисты";
-            this.теннесистыBindingSource.DataSource = this.tennisDataSet;
-            // 
-            // теннесистыTableAdapter
-            // 
-            this.теннесистыTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.UpdateOrder = pract_19.TennisDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.ТеннесистыTableAdapter = this.теннесистыTableAdapter;
+            this.AboutUs.Name = "AboutUs";
+            this.AboutUs.Size = new System.Drawing.Size(149, 22);
+            this.AboutUs.Text = "О программе";
             // 
             // теннесистыBindingNavigator
             // 
@@ -187,9 +173,34 @@
             this.теннесистыBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.теннесистыBindingNavigator.Name = "теннесистыBindingNavigator";
             this.теннесистыBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.теннесистыBindingNavigator.Size = new System.Drawing.Size(1378, 25);
+            this.теннесистыBindingNavigator.Size = new System.Drawing.Size(1362, 25);
             this.теннесистыBindingNavigator.TabIndex = 1;
             this.теннесистыBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Добавить";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(43, 22);
+            this.bindingNavigatorCountItem.Text = "для {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Общее число элементов";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Удалить";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -218,22 +229,14 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Положение";
             this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Текущее положение";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(43, 22);
-            this.bindingNavigatorCountItem.Text = "для {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Общее число элементов";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
@@ -256,26 +259,8 @@
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Добавить";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorDeleteItem.Text = "Удалить";
             // 
             // теннесистыBindingNavigatorSaveItem
             // 
@@ -313,7 +298,7 @@
             this.теннесистыDataGridView.Location = new System.Drawing.Point(12, 52);
             this.теннесистыDataGridView.Name = "теннесистыDataGridView";
             this.теннесистыDataGridView.ReadOnly = true;
-            this.теннесистыDataGridView.Size = new System.Drawing.Size(1354, 386);
+            this.теннесистыDataGridView.Size = new System.Drawing.Size(1338, 386);
             this.теннесистыDataGridView.TabIndex = 2;
             // 
             // dataGridViewTextBoxColumn1
@@ -321,111 +306,140 @@
             this.dataGridViewTextBoxColumn1.DataPropertyName = "Фамилия";
             this.dataGridViewTextBoxColumn1.HeaderText = "Фамилия";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.DataPropertyName = "Имя";
             this.dataGridViewTextBoxColumn2.HeaderText = "Имя";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.DataPropertyName = "Отчество";
             this.dataGridViewTextBoxColumn3.HeaderText = "Отчество";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn4
             // 
             this.dataGridViewTextBoxColumn4.DataPropertyName = "Пол";
             this.dataGridViewTextBoxColumn4.HeaderText = "Пол";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn5
             // 
             this.dataGridViewTextBoxColumn5.DataPropertyName = "ГодРождения";
             this.dataGridViewTextBoxColumn5.HeaderText = "ГодРождения";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn6
             // 
             this.dataGridViewTextBoxColumn6.DataPropertyName = "ФамилияТренера";
             this.dataGridViewTextBoxColumn6.HeaderText = "ФамилияТренера";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn7
             // 
             this.dataGridViewTextBoxColumn7.DataPropertyName = "ИмяТренера";
             this.dataGridViewTextBoxColumn7.HeaderText = "ИмяТренера";
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn8
             // 
             this.dataGridViewTextBoxColumn8.DataPropertyName = "Отчествотренера";
             this.dataGridViewTextBoxColumn8.HeaderText = "Отчествотренера";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn9
             // 
             this.dataGridViewTextBoxColumn9.DataPropertyName = "Страна";
             this.dataGridViewTextBoxColumn9.HeaderText = "Страна";
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn10
             // 
             this.dataGridViewTextBoxColumn10.DataPropertyName = "Рейтинг1Года";
             this.dataGridViewTextBoxColumn10.HeaderText = "Рейтинг1Года";
             this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn11
             // 
             this.dataGridViewTextBoxColumn11.DataPropertyName = "Рейтинг2Года";
             this.dataGridViewTextBoxColumn11.HeaderText = "Рейтинг2Года";
             this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn12
             // 
             this.dataGridViewTextBoxColumn12.DataPropertyName = "Рейтинг3Года";
             this.dataGridViewTextBoxColumn12.HeaderText = "Рейтинг3Года";
             this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            this.dataGridViewTextBoxColumn12.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn13
             // 
             this.dataGridViewTextBoxColumn13.DataPropertyName = "Рейтинг4Года";
             this.dataGridViewTextBoxColumn13.HeaderText = "Рейтинг4Года";
             this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            this.dataGridViewTextBoxColumn13.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn14
             // 
             this.dataGridViewTextBoxColumn14.DataPropertyName = "Рейтинг5Года";
             this.dataGridViewTextBoxColumn14.HeaderText = "Рейтинг5Года";
             this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            this.dataGridViewTextBoxColumn14.ReadOnly = true;
             // 
-            // AboutUs
+            // теннесистыBindingSource
             // 
-            this.AboutUs.Name = "AboutUs";
-            this.AboutUs.Size = new System.Drawing.Size(180, 22);
-            this.AboutUs.Text = "О программе";
+            this.теннесистыBindingSource.DataMember = "Теннесисты";
+            this.теннесистыBindingSource.DataSource = this.tennisDataSet;
+            // 
+            // tennisDataSet
+            // 
+            this.tennisDataSet.DataSetName = "TennisDataSet";
+            this.tennisDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // теннесистыTableAdapter
+            // 
+            this.теннесистыTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.UpdateOrder = pract_19.TennisDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.ТеннесистыTableAdapter = this.теннесистыTableAdapter;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1378, 450);
+            this.ClientSize = new System.Drawing.Size(1362, 450);
             this.Controls.Add(this.теннесистыDataGridView);
             this.Controls.Add(this.теннесистыBindingNavigator);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Form1";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tennisDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.теннесистыBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.теннесистыBindingNavigator)).EndInit();
             this.теннесистыBindingNavigator.ResumeLayout(false);
             this.теннесистыBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.теннесистыDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.теннесистыBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tennisDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

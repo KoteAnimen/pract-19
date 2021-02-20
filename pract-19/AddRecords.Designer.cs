@@ -44,27 +44,27 @@
             System.Windows.Forms.Label рейтинг4ГодаLabel;
             System.Windows.Forms.Label рейтинг5ГодаLabel;
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.tennisDataSet = new pract_19.TennisDataSet();
+            this.CancelButton = new System.Windows.Forms.Button();
+            this.AddButton = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.рейтинг5ГодаTextBox = new System.Windows.Forms.TextBox();
             this.теннесистыBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tennisDataSet = new pract_19.TennisDataSet();
+            this.рейтинг4ГодаTextBox = new System.Windows.Forms.TextBox();
+            this.рейтинг3ГодаTextBox = new System.Windows.Forms.TextBox();
+            this.рейтинг2ГодаTextBox = new System.Windows.Forms.TextBox();
+            this.рейтинг1ГодаTextBox = new System.Windows.Forms.TextBox();
+            this.странаTextBox = new System.Windows.Forms.TextBox();
+            this.отчествотренераTextBox = new System.Windows.Forms.TextBox();
+            this.имяТренераTextBox = new System.Windows.Forms.TextBox();
+            this.фамилияТренераTextBox = new System.Windows.Forms.TextBox();
+            this.годРожденияNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.полComboBox = new System.Windows.Forms.ComboBox();
+            this.отчествоTextBox = new System.Windows.Forms.TextBox();
+            this.имяTextBox = new System.Windows.Forms.TextBox();
+            this.фамилияTextBox = new System.Windows.Forms.TextBox();
             this.теннесистыTableAdapter = new pract_19.TennisDataSetTableAdapters.ТеннесистыTableAdapter();
             this.tableAdapterManager = new pract_19.TennisDataSetTableAdapters.TableAdapterManager();
-            this.фамилияTextBox = new System.Windows.Forms.TextBox();
-            this.имяTextBox = new System.Windows.Forms.TextBox();
-            this.отчествоTextBox = new System.Windows.Forms.TextBox();
-            this.полComboBox = new System.Windows.Forms.ComboBox();
-            this.годРожденияNumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.фамилияТренераTextBox = new System.Windows.Forms.TextBox();
-            this.имяТренераTextBox = new System.Windows.Forms.TextBox();
-            this.отчествотренераTextBox = new System.Windows.Forms.TextBox();
-            this.странаTextBox = new System.Windows.Forms.TextBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.рейтинг1ГодаTextBox = new System.Windows.Forms.TextBox();
-            this.рейтинг2ГодаTextBox = new System.Windows.Forms.TextBox();
-            this.рейтинг3ГодаTextBox = new System.Windows.Forms.TextBox();
-            this.рейтинг4ГодаTextBox = new System.Windows.Forms.TextBox();
-            this.рейтинг5ГодаTextBox = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             фамилияLabel = new System.Windows.Forms.Label();
             имяLabel = new System.Windows.Forms.Label();
             отчествоLabel = new System.Windows.Forms.Label();
@@ -80,16 +80,142 @@
             рейтинг4ГодаLabel = new System.Windows.Forms.Label();
             рейтинг5ГодаLabel = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tennisDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.теннесистыBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.годРожденияNumericUpDown)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.теннесистыBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tennisDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.годРожденияNumericUpDown)).BeginInit();
             this.SuspendLayout();
+            // 
+            // фамилияLabel
+            // 
+            фамилияLabel.AutoSize = true;
+            фамилияLabel.Location = new System.Drawing.Point(18, 37);
+            фамилияLabel.Name = "фамилияLabel";
+            фамилияLabel.Size = new System.Drawing.Size(59, 13);
+            фамилияLabel.TabIndex = 0;
+            фамилияLabel.Text = "Фамилия:";
+            // 
+            // имяLabel
+            // 
+            имяLabel.AutoSize = true;
+            имяLabel.Location = new System.Drawing.Point(124, 37);
+            имяLabel.Name = "имяLabel";
+            имяLabel.Size = new System.Drawing.Size(32, 13);
+            имяLabel.TabIndex = 2;
+            имяLabel.Text = "Имя:";
+            // 
+            // отчествоLabel
+            // 
+            отчествоLabel.AutoSize = true;
+            отчествоLabel.Location = new System.Drawing.Point(230, 37);
+            отчествоLabel.Name = "отчествоLabel";
+            отчествоLabel.Size = new System.Drawing.Size(57, 13);
+            отчествоLabel.TabIndex = 4;
+            отчествоLabel.Text = "Отчество:";
+            // 
+            // полLabel
+            // 
+            полLabel.AutoSize = true;
+            полLabel.Location = new System.Drawing.Point(155, 86);
+            полLabel.Name = "полLabel";
+            полLabel.Size = new System.Drawing.Size(30, 13);
+            полLabel.TabIndex = 6;
+            полLabel.Text = "Пол:";
+            // 
+            // годРожденияLabel
+            // 
+            годРожденияLabel.AutoSize = true;
+            годРожденияLabel.Location = new System.Drawing.Point(18, 86);
+            годРожденияLabel.Name = "годРожденияLabel";
+            годРожденияLabel.Size = new System.Drawing.Size(82, 13);
+            годРожденияLabel.TabIndex = 8;
+            годРожденияLabel.Text = "Год Рождения:";
+            // 
+            // фамилияТренераLabel
+            // 
+            фамилияТренераLabel.AutoSize = true;
+            фамилияТренераLabel.Location = new System.Drawing.Point(18, 184);
+            фамилияТренераLabel.Name = "фамилияТренераLabel";
+            фамилияТренераLabel.Size = new System.Drawing.Size(105, 13);
+            фамилияТренераLabel.TabIndex = 10;
+            фамилияТренераLabel.Text = "Фамилия Тренера:";
+            // 
+            // имяТренераLabel
+            // 
+            имяТренераLabel.AutoSize = true;
+            имяТренераLabel.Location = new System.Drawing.Point(124, 184);
+            имяТренераLabel.Name = "имяТренераLabel";
+            имяТренераLabel.Size = new System.Drawing.Size(78, 13);
+            имяТренераLabel.TabIndex = 12;
+            имяТренераLabel.Text = "Имя Тренера:";
+            // 
+            // отчествотренераLabel
+            // 
+            отчествотренераLabel.AutoSize = true;
+            отчествотренераLabel.Location = new System.Drawing.Point(230, 184);
+            отчествотренераLabel.Name = "отчествотренераLabel";
+            отчествотренераLabel.Size = new System.Drawing.Size(103, 13);
+            отчествотренераLabel.TabIndex = 14;
+            отчествотренераLabel.Text = "Отчество Тренера:";
+            // 
+            // странаLabel
+            // 
+            странаLabel.AutoSize = true;
+            странаLabel.Location = new System.Drawing.Point(20, 134);
+            странаLabel.Name = "странаLabel";
+            странаLabel.Size = new System.Drawing.Size(46, 13);
+            странаLabel.TabIndex = 16;
+            странаLabel.Text = "Страна:";
+            // 
+            // рейтинг1ГодаLabel
+            // 
+            рейтинг1ГодаLabel.AutoSize = true;
+            рейтинг1ГодаLabel.Location = new System.Drawing.Point(6, 27);
+            рейтинг1ГодаLabel.Name = "рейтинг1ГодаLabel";
+            рейтинг1ГодаLabel.Size = new System.Drawing.Size(100, 13);
+            рейтинг1ГодаLabel.TabIndex = 0;
+            рейтинг1ГодаLabel.Text = "Рейтинг 1-го года:";
+            // 
+            // рейтинг2ГодаLabel
+            // 
+            рейтинг2ГодаLabel.AutoSize = true;
+            рейтинг2ГодаLabel.Location = new System.Drawing.Point(111, 29);
+            рейтинг2ГодаLabel.Name = "рейтинг2ГодаLabel";
+            рейтинг2ГодаLabel.Size = new System.Drawing.Size(100, 13);
+            рейтинг2ГодаLabel.TabIndex = 2;
+            рейтинг2ГодаLabel.Text = "Рейтинг 2-го года:";
+            // 
+            // рейтинг3ГодаLabel
+            // 
+            рейтинг3ГодаLabel.AutoSize = true;
+            рейтинг3ГодаLabel.Location = new System.Drawing.Point(217, 27);
+            рейтинг3ГодаLabel.Name = "рейтинг3ГодаLabel";
+            рейтинг3ГодаLabel.Size = new System.Drawing.Size(100, 13);
+            рейтинг3ГодаLabel.TabIndex = 4;
+            рейтинг3ГодаLabel.Text = "Рейтинг 3-го года:";
+            // 
+            // рейтинг4ГодаLabel
+            // 
+            рейтинг4ГодаLabel.AutoSize = true;
+            рейтинг4ГодаLabel.Location = new System.Drawing.Point(323, 27);
+            рейтинг4ГодаLabel.Name = "рейтинг4ГодаLabel";
+            рейтинг4ГодаLabel.Size = new System.Drawing.Size(100, 13);
+            рейтинг4ГодаLabel.TabIndex = 6;
+            рейтинг4ГодаLabel.Text = "Рейтинг 4-го года:";
+            // 
+            // рейтинг5ГодаLabel
+            // 
+            рейтинг5ГодаLabel.AutoSize = true;
+            рейтинг5ГодаLabel.Location = new System.Drawing.Point(429, 28);
+            рейтинг5ГодаLabel.Name = "рейтинг5ГодаLabel";
+            рейтинг5ГодаLabel.Size = new System.Drawing.Size(100, 13);
+            рейтинг5ГодаLabel.TabIndex = 8;
+            рейтинг5ГодаLabel.Text = "Рейтинг 5-го года:";
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.CancelButton);
+            this.groupBox1.Controls.Add(this.AddButton);
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Controls.Add(странаLabel);
             this.groupBox1.Controls.Add(this.странаTextBox);
@@ -116,106 +242,128 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Анкета спортсмена";
             // 
-            // tennisDataSet
+            // CancelButton
             // 
-            this.tennisDataSet.DataSetName = "TennisDataSet";
-            this.tennisDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.CancelButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CancelButton.Location = new System.Drawing.Point(311, 351);
+            this.CancelButton.Name = "CancelButton";
+            this.CancelButton.Size = new System.Drawing.Size(224, 33);
+            this.CancelButton.TabIndex = 20;
+            this.CancelButton.Text = "Отмена";
+            this.CancelButton.UseVisualStyleBackColor = true;
+            this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
+            // 
+            // AddButton
+            // 
+            this.AddButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AddButton.Location = new System.Drawing.Point(21, 351);
+            this.AddButton.Name = "AddButton";
+            this.AddButton.Size = new System.Drawing.Size(224, 33);
+            this.AddButton.TabIndex = 19;
+            this.AddButton.Text = "Добавить запись о спортсмене";
+            this.AddButton.UseVisualStyleBackColor = true;
+            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(рейтинг5ГодаLabel);
+            this.groupBox2.Controls.Add(this.рейтинг5ГодаTextBox);
+            this.groupBox2.Controls.Add(рейтинг4ГодаLabel);
+            this.groupBox2.Controls.Add(this.рейтинг4ГодаTextBox);
+            this.groupBox2.Controls.Add(рейтинг3ГодаLabel);
+            this.groupBox2.Controls.Add(this.рейтинг3ГодаTextBox);
+            this.groupBox2.Controls.Add(рейтинг2ГодаLabel);
+            this.groupBox2.Controls.Add(this.рейтинг2ГодаTextBox);
+            this.groupBox2.Controls.Add(рейтинг1ГодаLabel);
+            this.groupBox2.Controls.Add(this.рейтинг1ГодаTextBox);
+            this.groupBox2.Location = new System.Drawing.Point(6, 238);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(543, 82);
+            this.groupBox2.TabIndex = 18;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Рейтинг за 5 лет";
+            // 
+            // рейтинг5ГодаTextBox
+            // 
+            this.рейтинг5ГодаTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.теннесистыBindingSource, "Рейтинг5Года", true));
+            this.рейтинг5ГодаTextBox.Location = new System.Drawing.Point(432, 43);
+            this.рейтинг5ГодаTextBox.Name = "рейтинг5ГодаTextBox";
+            this.рейтинг5ГодаTextBox.Size = new System.Drawing.Size(100, 20);
+            this.рейтинг5ГодаTextBox.TabIndex = 9;
             // 
             // теннесистыBindingSource
             // 
             this.теннесистыBindingSource.DataMember = "Теннесисты";
             this.теннесистыBindingSource.DataSource = this.tennisDataSet;
             // 
-            // теннесистыTableAdapter
+            // tennisDataSet
             // 
-            this.теннесистыTableAdapter.ClearBeforeFill = true;
+            this.tennisDataSet.DataSetName = "TennisDataSet";
+            this.tennisDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // tableAdapterManager
+            // рейтинг4ГодаTextBox
             // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.UpdateOrder = pract_19.TennisDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.ТеннесистыTableAdapter = this.теннесистыTableAdapter;
+            this.рейтинг4ГодаTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.теннесистыBindingSource, "Рейтинг4Года", true));
+            this.рейтинг4ГодаTextBox.Location = new System.Drawing.Point(326, 43);
+            this.рейтинг4ГодаTextBox.Name = "рейтинг4ГодаTextBox";
+            this.рейтинг4ГодаTextBox.Size = new System.Drawing.Size(100, 20);
+            this.рейтинг4ГодаTextBox.TabIndex = 7;
             // 
-            // фамилияLabel
+            // рейтинг3ГодаTextBox
             // 
-            фамилияLabel.AutoSize = true;
-            фамилияLabel.Location = new System.Drawing.Point(18, 37);
-            фамилияLabel.Name = "фамилияLabel";
-            фамилияLabel.Size = new System.Drawing.Size(59, 13);
-            фамилияLabel.TabIndex = 0;
-            фамилияLabel.Text = "Фамилия:";
+            this.рейтинг3ГодаTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.теннесистыBindingSource, "Рейтинг3Года", true));
+            this.рейтинг3ГодаTextBox.Location = new System.Drawing.Point(220, 43);
+            this.рейтинг3ГодаTextBox.Name = "рейтинг3ГодаTextBox";
+            this.рейтинг3ГодаTextBox.Size = new System.Drawing.Size(100, 20);
+            this.рейтинг3ГодаTextBox.TabIndex = 5;
             // 
-            // фамилияTextBox
+            // рейтинг2ГодаTextBox
             // 
-            this.фамилияTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.теннесистыBindingSource, "Фамилия", true));
-            this.фамилияTextBox.Location = new System.Drawing.Point(21, 53);
-            this.фамилияTextBox.Name = "фамилияTextBox";
-            this.фамилияTextBox.Size = new System.Drawing.Size(100, 20);
-            this.фамилияTextBox.TabIndex = 1;
+            this.рейтинг2ГодаTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.теннесистыBindingSource, "Рейтинг2Года", true));
+            this.рейтинг2ГодаTextBox.Location = new System.Drawing.Point(114, 43);
+            this.рейтинг2ГодаTextBox.Name = "рейтинг2ГодаTextBox";
+            this.рейтинг2ГодаTextBox.Size = new System.Drawing.Size(100, 20);
+            this.рейтинг2ГодаTextBox.TabIndex = 3;
             // 
-            // имяLabel
+            // рейтинг1ГодаTextBox
             // 
-            имяLabel.AutoSize = true;
-            имяLabel.Location = new System.Drawing.Point(124, 37);
-            имяLabel.Name = "имяLabel";
-            имяLabel.Size = new System.Drawing.Size(32, 13);
-            имяLabel.TabIndex = 2;
-            имяLabel.Text = "Имя:";
+            this.рейтинг1ГодаTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.теннесистыBindingSource, "Рейтинг1Года", true));
+            this.рейтинг1ГодаTextBox.Location = new System.Drawing.Point(8, 43);
+            this.рейтинг1ГодаTextBox.Name = "рейтинг1ГодаTextBox";
+            this.рейтинг1ГодаTextBox.Size = new System.Drawing.Size(100, 20);
+            this.рейтинг1ГодаTextBox.TabIndex = 1;
             // 
-            // имяTextBox
+            // странаTextBox
             // 
-            this.имяTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.теннесистыBindingSource, "Имя", true));
-            this.имяTextBox.Location = new System.Drawing.Point(127, 53);
-            this.имяTextBox.Name = "имяTextBox";
-            this.имяTextBox.Size = new System.Drawing.Size(100, 20);
-            this.имяTextBox.TabIndex = 3;
+            this.странаTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.теннесистыBindingSource, "Страна", true));
+            this.странаTextBox.Location = new System.Drawing.Point(21, 150);
+            this.странаTextBox.Name = "странаTextBox";
+            this.странаTextBox.Size = new System.Drawing.Size(136, 20);
+            this.странаTextBox.TabIndex = 17;
             // 
-            // отчествоLabel
+            // отчествотренераTextBox
             // 
-            отчествоLabel.AutoSize = true;
-            отчествоLabel.Location = new System.Drawing.Point(230, 37);
-            отчествоLabel.Name = "отчествоLabel";
-            отчествоLabel.Size = new System.Drawing.Size(57, 13);
-            отчествоLabel.TabIndex = 4;
-            отчествоLabel.Text = "Отчество:";
+            this.отчествотренераTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.теннесистыBindingSource, "Отчествотренера", true));
+            this.отчествотренераTextBox.Location = new System.Drawing.Point(233, 200);
+            this.отчествотренераTextBox.Name = "отчествотренераTextBox";
+            this.отчествотренераTextBox.Size = new System.Drawing.Size(100, 20);
+            this.отчествотренераTextBox.TabIndex = 15;
             // 
-            // отчествоTextBox
+            // имяТренераTextBox
             // 
-            this.отчествоTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.теннесистыBindingSource, "Отчество", true));
-            this.отчествоTextBox.Location = new System.Drawing.Point(233, 53);
-            this.отчествоTextBox.Name = "отчествоTextBox";
-            this.отчествоTextBox.Size = new System.Drawing.Size(100, 20);
-            this.отчествоTextBox.TabIndex = 5;
+            this.имяТренераTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.теннесистыBindingSource, "ИмяТренера", true));
+            this.имяТренераTextBox.Location = new System.Drawing.Point(127, 200);
+            this.имяТренераTextBox.Name = "имяТренераTextBox";
+            this.имяТренераTextBox.Size = new System.Drawing.Size(100, 20);
+            this.имяТренераTextBox.TabIndex = 13;
             // 
-            // полLabel
+            // фамилияТренераTextBox
             // 
-            полLabel.AutoSize = true;
-            полLabel.Location = new System.Drawing.Point(155, 86);
-            полLabel.Name = "полLabel";
-            полLabel.Size = new System.Drawing.Size(30, 13);
-            полLabel.TabIndex = 6;
-            полLabel.Text = "Пол:";
-            // 
-            // полComboBox
-            // 
-            this.полComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.теннесистыBindingSource, "Пол", true));
-            this.полComboBox.FormattingEnabled = true;
-            this.полComboBox.Items.AddRange(new object[] {
-            "Муж",
-            "Жен"});
-            this.полComboBox.Location = new System.Drawing.Point(158, 102);
-            this.полComboBox.Name = "полComboBox";
-            this.полComboBox.Size = new System.Drawing.Size(72, 21);
-            this.полComboBox.TabIndex = 7;
-            // 
-            // годРожденияLabel
-            // 
-            годРожденияLabel.AutoSize = true;
-            годРожденияLabel.Location = new System.Drawing.Point(18, 86);
-            годРожденияLabel.Name = "годРожденияLabel";
-            годРожденияLabel.Size = new System.Drawing.Size(82, 13);
-            годРожденияLabel.TabIndex = 8;
-            годРожденияLabel.Text = "Год Рождения:";
+            this.фамилияТренераTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.теннесистыBindingSource, "ФамилияТренера", true));
+            this.фамилияТренераTextBox.Location = new System.Drawing.Point(21, 200);
+            this.фамилияТренераTextBox.Name = "фамилияТренераTextBox";
+            this.фамилияТренераTextBox.Size = new System.Drawing.Size(100, 20);
+            this.фамилияТренераTextBox.TabIndex = 11;
             // 
             // годРожденияNumericUpDown
             // 
@@ -240,197 +388,51 @@
             0,
             0});
             // 
-            // фамилияТренераLabel
+            // полComboBox
             // 
-            фамилияТренераLabel.AutoSize = true;
-            фамилияТренераLabel.Location = new System.Drawing.Point(18, 184);
-            фамилияТренераLabel.Name = "фамилияТренераLabel";
-            фамилияТренераLabel.Size = new System.Drawing.Size(105, 13);
-            фамилияТренераLabel.TabIndex = 10;
-            фамилияТренераLabel.Text = "Фамилия Тренера:";
+            this.полComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.теннесистыBindingSource, "Пол", true));
+            this.полComboBox.FormattingEnabled = true;
+            this.полComboBox.Items.AddRange(new object[] {
+            "Муж",
+            "Жен"});
+            this.полComboBox.Location = new System.Drawing.Point(158, 102);
+            this.полComboBox.Name = "полComboBox";
+            this.полComboBox.Size = new System.Drawing.Size(72, 21);
+            this.полComboBox.TabIndex = 7;
             // 
-            // фамилияТренераTextBox
+            // отчествоTextBox
             // 
-            this.фамилияТренераTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.теннесистыBindingSource, "ФамилияТренера", true));
-            this.фамилияТренераTextBox.Location = new System.Drawing.Point(21, 200);
-            this.фамилияТренераTextBox.Name = "фамилияТренераTextBox";
-            this.фамилияТренераTextBox.Size = new System.Drawing.Size(100, 20);
-            this.фамилияТренераTextBox.TabIndex = 11;
+            this.отчествоTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.теннесистыBindingSource, "Отчество", true));
+            this.отчествоTextBox.Location = new System.Drawing.Point(233, 53);
+            this.отчествоTextBox.Name = "отчествоTextBox";
+            this.отчествоTextBox.Size = new System.Drawing.Size(100, 20);
+            this.отчествоTextBox.TabIndex = 5;
             // 
-            // имяТренераLabel
+            // имяTextBox
             // 
-            имяТренераLabel.AutoSize = true;
-            имяТренераLabel.Location = new System.Drawing.Point(124, 184);
-            имяТренераLabel.Name = "имяТренераLabel";
-            имяТренераLabel.Size = new System.Drawing.Size(78, 13);
-            имяТренераLabel.TabIndex = 12;
-            имяТренераLabel.Text = "Имя Тренера:";
+            this.имяTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.теннесистыBindingSource, "Имя", true));
+            this.имяTextBox.Location = new System.Drawing.Point(127, 53);
+            this.имяTextBox.Name = "имяTextBox";
+            this.имяTextBox.Size = new System.Drawing.Size(100, 20);
+            this.имяTextBox.TabIndex = 3;
             // 
-            // имяТренераTextBox
+            // фамилияTextBox
             // 
-            this.имяТренераTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.теннесистыBindingSource, "ИмяТренера", true));
-            this.имяТренераTextBox.Location = new System.Drawing.Point(127, 200);
-            this.имяТренераTextBox.Name = "имяТренераTextBox";
-            this.имяТренераTextBox.Size = new System.Drawing.Size(100, 20);
-            this.имяТренераTextBox.TabIndex = 13;
+            this.фамилияTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.теннесистыBindingSource, "Фамилия", true));
+            this.фамилияTextBox.Location = new System.Drawing.Point(21, 53);
+            this.фамилияTextBox.Name = "фамилияTextBox";
+            this.фамилияTextBox.Size = new System.Drawing.Size(100, 20);
+            this.фамилияTextBox.TabIndex = 1;
             // 
-            // отчествотренераLabel
+            // теннесистыTableAdapter
             // 
-            отчествотренераLabel.AutoSize = true;
-            отчествотренераLabel.Location = new System.Drawing.Point(230, 184);
-            отчествотренераLabel.Name = "отчествотренераLabel";
-            отчествотренераLabel.Size = new System.Drawing.Size(103, 13);
-            отчествотренераLabel.TabIndex = 14;
-            отчествотренераLabel.Text = "Отчество Тренера:";
+            this.теннесистыTableAdapter.ClearBeforeFill = true;
             // 
-            // отчествотренераTextBox
+            // tableAdapterManager
             // 
-            this.отчествотренераTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.теннесистыBindingSource, "Отчествотренера", true));
-            this.отчествотренераTextBox.Location = new System.Drawing.Point(233, 200);
-            this.отчествотренераTextBox.Name = "отчествотренераTextBox";
-            this.отчествотренераTextBox.Size = new System.Drawing.Size(100, 20);
-            this.отчествотренераTextBox.TabIndex = 15;
-            // 
-            // странаLabel
-            // 
-            странаLabel.AutoSize = true;
-            странаLabel.Location = new System.Drawing.Point(20, 134);
-            странаLabel.Name = "странаLabel";
-            странаLabel.Size = new System.Drawing.Size(46, 13);
-            странаLabel.TabIndex = 16;
-            странаLabel.Text = "Страна:";
-            // 
-            // странаTextBox
-            // 
-            this.странаTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.теннесистыBindingSource, "Страна", true));
-            this.странаTextBox.Location = new System.Drawing.Point(21, 150);
-            this.странаTextBox.Name = "странаTextBox";
-            this.странаTextBox.Size = new System.Drawing.Size(136, 20);
-            this.странаTextBox.TabIndex = 17;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(рейтинг5ГодаLabel);
-            this.groupBox2.Controls.Add(this.рейтинг5ГодаTextBox);
-            this.groupBox2.Controls.Add(рейтинг4ГодаLabel);
-            this.groupBox2.Controls.Add(this.рейтинг4ГодаTextBox);
-            this.groupBox2.Controls.Add(рейтинг3ГодаLabel);
-            this.groupBox2.Controls.Add(this.рейтинг3ГодаTextBox);
-            this.groupBox2.Controls.Add(рейтинг2ГодаLabel);
-            this.groupBox2.Controls.Add(this.рейтинг2ГодаTextBox);
-            this.groupBox2.Controls.Add(рейтинг1ГодаLabel);
-            this.groupBox2.Controls.Add(this.рейтинг1ГодаTextBox);
-            this.groupBox2.Location = new System.Drawing.Point(6, 238);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(543, 82);
-            this.groupBox2.TabIndex = 18;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Рейтинг за 5 лет";
-            // 
-            // рейтинг1ГодаLabel
-            // 
-            рейтинг1ГодаLabel.AutoSize = true;
-            рейтинг1ГодаLabel.Location = new System.Drawing.Point(6, 27);
-            рейтинг1ГодаLabel.Name = "рейтинг1ГодаLabel";
-            рейтинг1ГодаLabel.Size = new System.Drawing.Size(100, 13);
-            рейтинг1ГодаLabel.TabIndex = 0;
-            рейтинг1ГодаLabel.Text = "Рейтинг 1-го года:";
-            // 
-            // рейтинг1ГодаTextBox
-            // 
-            this.рейтинг1ГодаTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.теннесистыBindingSource, "Рейтинг1Года", true));
-            this.рейтинг1ГодаTextBox.Location = new System.Drawing.Point(8, 43);
-            this.рейтинг1ГодаTextBox.Name = "рейтинг1ГодаTextBox";
-            this.рейтинг1ГодаTextBox.Size = new System.Drawing.Size(100, 20);
-            this.рейтинг1ГодаTextBox.TabIndex = 1;
-            // 
-            // рейтинг2ГодаLabel
-            // 
-            рейтинг2ГодаLabel.AutoSize = true;
-            рейтинг2ГодаLabel.Location = new System.Drawing.Point(111, 29);
-            рейтинг2ГодаLabel.Name = "рейтинг2ГодаLabel";
-            рейтинг2ГодаLabel.Size = new System.Drawing.Size(100, 13);
-            рейтинг2ГодаLabel.TabIndex = 2;
-            рейтинг2ГодаLabel.Text = "Рейтинг 2-го года:";
-            // 
-            // рейтинг2ГодаTextBox
-            // 
-            this.рейтинг2ГодаTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.теннесистыBindingSource, "Рейтинг2Года", true));
-            this.рейтинг2ГодаTextBox.Location = new System.Drawing.Point(114, 43);
-            this.рейтинг2ГодаTextBox.Name = "рейтинг2ГодаTextBox";
-            this.рейтинг2ГодаTextBox.Size = new System.Drawing.Size(100, 20);
-            this.рейтинг2ГодаTextBox.TabIndex = 3;
-            // 
-            // рейтинг3ГодаLabel
-            // 
-            рейтинг3ГодаLabel.AutoSize = true;
-            рейтинг3ГодаLabel.Location = new System.Drawing.Point(217, 27);
-            рейтинг3ГодаLabel.Name = "рейтинг3ГодаLabel";
-            рейтинг3ГодаLabel.Size = new System.Drawing.Size(100, 13);
-            рейтинг3ГодаLabel.TabIndex = 4;
-            рейтинг3ГодаLabel.Text = "Рейтинг 3-го года:";
-            // 
-            // рейтинг3ГодаTextBox
-            // 
-            this.рейтинг3ГодаTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.теннесистыBindingSource, "Рейтинг3Года", true));
-            this.рейтинг3ГодаTextBox.Location = new System.Drawing.Point(220, 43);
-            this.рейтинг3ГодаTextBox.Name = "рейтинг3ГодаTextBox";
-            this.рейтинг3ГодаTextBox.Size = new System.Drawing.Size(100, 20);
-            this.рейтинг3ГодаTextBox.TabIndex = 5;
-            // 
-            // рейтинг4ГодаLabel
-            // 
-            рейтинг4ГодаLabel.AutoSize = true;
-            рейтинг4ГодаLabel.Location = new System.Drawing.Point(323, 27);
-            рейтинг4ГодаLabel.Name = "рейтинг4ГодаLabel";
-            рейтинг4ГодаLabel.Size = new System.Drawing.Size(100, 13);
-            рейтинг4ГодаLabel.TabIndex = 6;
-            рейтинг4ГодаLabel.Text = "Рейтинг 4-го года:";
-            // 
-            // рейтинг4ГодаTextBox
-            // 
-            this.рейтинг4ГодаTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.теннесистыBindingSource, "Рейтинг4Года", true));
-            this.рейтинг4ГодаTextBox.Location = new System.Drawing.Point(326, 43);
-            this.рейтинг4ГодаTextBox.Name = "рейтинг4ГодаTextBox";
-            this.рейтинг4ГодаTextBox.Size = new System.Drawing.Size(100, 20);
-            this.рейтинг4ГодаTextBox.TabIndex = 7;
-            // 
-            // рейтинг5ГодаLabel
-            // 
-            рейтинг5ГодаLabel.AutoSize = true;
-            рейтинг5ГодаLabel.Location = new System.Drawing.Point(429, 28);
-            рейтинг5ГодаLabel.Name = "рейтинг5ГодаLabel";
-            рейтинг5ГодаLabel.Size = new System.Drawing.Size(100, 13);
-            рейтинг5ГодаLabel.TabIndex = 8;
-            рейтинг5ГодаLabel.Text = "Рейтинг 5-го года:";
-            // 
-            // рейтинг5ГодаTextBox
-            // 
-            this.рейтинг5ГодаTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.теннесистыBindingSource, "Рейтинг5Года", true));
-            this.рейтинг5ГодаTextBox.Location = new System.Drawing.Point(432, 43);
-            this.рейтинг5ГодаTextBox.Name = "рейтинг5ГодаTextBox";
-            this.рейтинг5ГодаTextBox.Size = new System.Drawing.Size(100, 20);
-            this.рейтинг5ГодаTextBox.TabIndex = 9;
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(21, 351);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(224, 33);
-            this.button1.TabIndex = 19;
-            this.button1.Text = "Добавить запись о спортсмене";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(311, 351);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(224, 33);
-            this.button2.TabIndex = 20;
-            this.button2.Text = "Отмена";
-            this.button2.UseVisualStyleBackColor = true;
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.UpdateOrder = pract_19.TennisDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.ТеннесистыTableAdapter = this.теннесистыTableAdapter;
             // 
             // AddRecords
             // 
@@ -448,11 +450,11 @@
             this.Load += new System.EventHandler(this.AddRecords_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tennisDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.теннесистыBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.годРожденияNumericUpDown)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.теннесистыBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tennisDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.годРожденияNumericUpDown)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -479,7 +481,7 @@
         private System.Windows.Forms.TextBox рейтинг3ГодаTextBox;
         private System.Windows.Forms.TextBox рейтинг5ГодаTextBox;
         private System.Windows.Forms.TextBox рейтинг4ГодаTextBox;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button CancelButton;
+        private System.Windows.Forms.Button AddButton;
     }
 }
