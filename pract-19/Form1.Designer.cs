@@ -311,6 +311,7 @@
             this.теннесистыDataGridView.DataSource = this.теннесистыBindingSource;
             this.теннесистыDataGridView.Location = new System.Drawing.Point(12, 52);
             this.теннесистыDataGridView.Name = "теннесистыDataGridView";
+            this.теннесистыDataGridView.ReadOnly = true;
             this.теннесистыDataGridView.Size = new System.Drawing.Size(1354, 386);
             this.теннесистыDataGridView.TabIndex = 2;
             // 
