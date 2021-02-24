@@ -42,5 +42,12 @@ namespace pract_19
             this.теннесистыTableAdapter.Fill(this.tennisDataSet.Теннесисты);
             теннесистыDataGridView.CurrentCell = теннесистыDataGridView[col, row];
         }
+
+        private void SearchChange_Click(object sender, EventArgs e)
+        {
+            Search search = new Search();
+            search.ShowDialog();
+            теннесистыDataGridView.Rows[search.index].Selected = true;
+        }
     }
 }

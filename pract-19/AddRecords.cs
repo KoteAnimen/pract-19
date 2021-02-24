@@ -16,13 +16,26 @@ namespace pract_19
         {
             InitializeComponent();
         }
-       
+
+        private void теннесистыBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.теннесистыBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.tennisDataSet);
+
+        }
+
+        private void теннесистыBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.теннесистыBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.tennisDataSet);
+
+        }
 
         private void AddRecords_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "tennisDataSet.Теннесисты". При необходимости она может быть перемещена или удалена.
-            
-
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "tennisDataSet.Теннесисты". При необходимости она может быть перемещена или удалена.            
         }
 
         private void AddButton_Click(object sender, EventArgs e)

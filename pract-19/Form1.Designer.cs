@@ -114,6 +114,7 @@
             this.SearchChange.Name = "SearchChange";
             this.SearchChange.Size = new System.Drawing.Size(189, 22);
             this.SearchChange.Text = "Найти и изменить";
+            this.SearchChange.Click += new System.EventHandler(this.SearchChange_Click);
             // 
             // DeleteRecord
             // 
@@ -296,6 +297,7 @@
             this.dataGridViewTextBoxColumn14});
             this.теннесистыDataGridView.DataSource = this.теннесистыBindingSource;
             this.теннесистыDataGridView.Location = new System.Drawing.Point(12, 52);
+            this.теннесистыDataGridView.MultiSelect = false;
             this.теннесистыDataGridView.Name = "теннесистыDataGridView";
             this.теннесистыDataGridView.ReadOnly = true;
             this.теннесистыDataGridView.Size = new System.Drawing.Size(1338, 386);
