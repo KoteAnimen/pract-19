@@ -16,27 +16,12 @@ namespace pract_19
         {
             InitializeComponent();
         }
-
-        private void теннесистыBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.теннесистыBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.tennisDataSet);
-
-        }
-
-        private void теннесистыBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.теннесистыBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.tennisDataSet);
-
-        }
+       
 
         private void AddRecords_Load(object sender, EventArgs e)
         {
             // TODO: данная строка кода позволяет загрузить данные в таблицу "tennisDataSet.Теннесисты". При необходимости она может быть перемещена или удалена.
-            this.теннесистыTableAdapter.Fill(this.tennisDataSet.Теннесисты);
+            
 
         }
 
@@ -64,7 +49,7 @@ namespace pract_19
             }
             try
             {
-                теннесистыTableAdapter.Insert(фамилияTextBox.Text, имяTextBox.Text, отчествоTextBox.Text, полComboBox.Text, (short)годРожденияNumericUpDown.Value, фамилияТренераTextBox.Text, имяТренераTextBox.Text, отчествотренераTextBox.Text, странаTextBox.Text, Convert.ToDouble(рейтинг1ГодаTextBox.Text), Convert.ToDouble(рейтинг2ГодаTextBox.Text), Convert.ToDouble(рейтинг3ГодаTextBox.Text), Convert.ToDouble(рейтинг4ГодаTextBox.Text), Convert.ToDouble(рейтинг5ГодаTextBox.Text));
+                теннесистыTableAdapter.Insert(фамилияTextBox.Text, имяTextBox.Text, отчествоTextBox.Text, полComboBox.Text, (short)годРожденияNumericUpDown.Value, фамилияТренераTextBox.Text, имяТренераTextBox.Text, отчествотренераTextBox.Text, странаTextBox.Text, Convert.ToDouble(рейтинг1ГодаTextBox.Text), Convert.ToDouble(рейтинг2ГодаTextBox.Text), Convert.ToDouble(рейтинг3ГодаTextBox.Text), Convert.ToDouble(рейтинг4ГодаTextBox.Text), Convert.ToDouble(рейтинг5ГодаTextBox.Text));                
                 Close();
             }
             catch
