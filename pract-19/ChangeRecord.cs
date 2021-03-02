@@ -41,7 +41,7 @@ namespace pract_19
             имяTextBox.Text = tennisDataSet.Теннесисты.Rows[0][1].ToString();
             отчествоTextBox.Text = tennisDataSet.Теннесисты.Rows[0][2].ToString();
             полComboBox.Text = tennisDataSet.Теннесисты.Rows[0][3].ToString();
-            годРожденияNumericUpDown.Value = (int)tennisDataSet.Теннесисты.Rows[0][4];
+            годРожденияNumericUpDown.Value = Convert.ToInt32(tennisDataSet.Теннесисты.Rows[0][4]);
             фамилияТренераTextBox.Text = tennisDataSet.Теннесисты.Rows[0][5].ToString();
             имяТренераTextBox.Text = tennisDataSet.Теннесисты.Rows[0][6].ToString();
             отчествотренераTextBox.Text = tennisDataSet.Теннесисты.Rows[0][7].ToString();
