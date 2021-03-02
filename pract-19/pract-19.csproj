@@ -86,6 +86,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChangeRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangeRecord.Designer.cs">
+      <DependentUpon>ChangeRecord.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddRecords.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +117,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TennisDataSet.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ChangeRecord.resx">
+      <DependentUpon>ChangeRecord.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddRecords.resx">
       <DependentUpon>AddRecords.cs</DependentUpon>
     </EmbeddedResource>

@@ -1390,13 +1390,42 @@ namespace pract_19.TennisDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
+            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[3];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT Фамилия, Имя, Отчество, Пол, ГодРождения, ФамилияТренера, ИмяТренера, Отче" +
                 "ствотренера, Страна, Рейтинг1Года, Рейтинг2Года, Рейтинг3Года, Рейтинг4Года, Рей" +
                 "тинг5Года FROM Теннесисты";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.OleDb.OleDbCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT        Фамилия, Имя, Отчество, Пол, ГодРождения, ФамилияТренера, ИмяТренер" +
+                "а, Отчествотренера, Страна, Рейтинг1Года, Рейтинг2Года, Рейтинг3Года, \r\n        " +
+                "                 Рейтинг4Года, Рейтинг5Года\r\nFROM            Теннесисты\r\nWHERE (" +
+                "Фамилия = ?)";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Фамилия", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Фамилия", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[2] = new global::System.Data.OleDb.OleDbCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = @"UPDATE       Теннесисты
+SET                Фамилия = ?, Имя = ?, Отчество = ?, Пол = ?, ГодРождения = ?, ФамилияТренера = ?, ИмяТренера = ?, Отчествотренера = ?, Страна = ?, Рейтинг1Года = ?, 
+                         Рейтинг2Года = ?, Рейтинг3Года = ?, Рейтинг4Года = ?, Рейтинг5Года = ?
+";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Фамилия", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Фамилия", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Имя", global::System.Data.OleDb.OleDbType.WChar, 50, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Имя", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Отчество", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Отчество", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Пол", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Пол", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("ГодРождения", global::System.Data.OleDb.OleDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ГодРождения", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("ФамилияТренера", global::System.Data.OleDb.OleDbType.WChar, 50, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ФамилияТренера", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("ИмяТренера", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ИмяТренера", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Отчествотренера", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Отчествотренера", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Страна", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Страна", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Рейтинг1Года", global::System.Data.OleDb.OleDbType.Double, 0, global::System.Data.ParameterDirection.Input, ((byte)(15)), ((byte)(0)), "Рейтинг1Года", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Рейтинг2Года", global::System.Data.OleDb.OleDbType.Double, 0, global::System.Data.ParameterDirection.Input, ((byte)(15)), ((byte)(0)), "Рейтинг2Года", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Рейтинг3Года", global::System.Data.OleDb.OleDbType.Double, 0, global::System.Data.ParameterDirection.Input, ((byte)(15)), ((byte)(0)), "Рейтинг3Года", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Рейтинг4Года", global::System.Data.OleDb.OleDbType.Double, 0, global::System.Data.ParameterDirection.Input, ((byte)(15)), ((byte)(0)), "Рейтинг4Года", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Рейтинг5Года", global::System.Data.OleDb.OleDbType.Double, 0, global::System.Data.ParameterDirection.Input, ((byte)(15)), ((byte)(0)), "Рейтинг5Года", global::System.Data.DataRowVersion.Current, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1418,6 +1447,42 @@ namespace pract_19.TennisDataSetTableAdapters {
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual TennisDataSet.ТеннесистыDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            TennisDataSet.ТеннесистыDataTable dataTable = new TennisDataSet.ТеннесистыDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillBy(TennisDataSet.ТеннесистыDataTable dataTable, string Фамилия) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((Фамилия == null)) {
+                throw new global::System.ArgumentNullException("Фамилия");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(Фамилия));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual TennisDataSet.ТеннесистыDataTable GetFamily(string Фамилия) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((Фамилия == null)) {
+                throw new global::System.ArgumentNullException("Фамилия");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(Фамилия));
+            }
             TennisDataSet.ТеннесистыDataTable dataTable = new TennisDataSet.ТеннесистыDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -1958,6 +2023,113 @@ namespace pract_19.TennisDataSetTableAdapters {
                     global::System.Nullable<double> Original_Рейтинг4Года, 
                     global::System.Nullable<double> Original_Рейтинг5Года) {
             return this.Update(Original_Фамилия, Имя, Отчество, Пол, ГодРождения, ФамилияТренера, ИмяТренера, Отчествотренера, Страна, Рейтинг1Года, Рейтинг2Года, Рейтинг3Года, Рейтинг4Года, Рейтинг5Года, Original_Фамилия, Original_Имя, Original_Отчество, Original_Пол, Original_ГодРождения, Original_ФамилияТренера, Original_ИмяТренера, Original_Отчествотренера, Original_Страна, Original_Рейтинг1Года, Original_Рейтинг2Года, Original_Рейтинг3Года, Original_Рейтинг4Года, Original_Рейтинг5Года);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
+        public virtual int UpdateRecord(string Фамилия, string Имя, string Отчество, string Пол, global::System.Nullable<short> ГодРождения, string ФамилияТренера, string ИмяТренера, string Отчествотренера, string Страна, global::System.Nullable<decimal> Рейтинг1Года, global::System.Nullable<decimal> Рейтинг2Года, global::System.Nullable<decimal> Рейтинг3Года, global::System.Nullable<decimal> Рейтинг4Года, global::System.Nullable<decimal> Рейтинг5Года) {
+            global::System.Data.OleDb.OleDbCommand command = this.CommandCollection[2];
+            if ((Фамилия == null)) {
+                throw new global::System.ArgumentNullException("Фамилия");
+            }
+            else {
+                command.Parameters[0].Value = ((string)(Фамилия));
+            }
+            if ((Имя == null)) {
+                throw new global::System.ArgumentNullException("Имя");
+            }
+            else {
+                command.Parameters[1].Value = ((string)(Имя));
+            }
+            if ((Отчество == null)) {
+                command.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[2].Value = ((string)(Отчество));
+            }
+            if ((Пол == null)) {
+                throw new global::System.ArgumentNullException("Пол");
+            }
+            else {
+                command.Parameters[3].Value = ((string)(Пол));
+            }
+            if ((ГодРождения.HasValue == true)) {
+                command.Parameters[4].Value = ((short)(ГодРождения.Value));
+            }
+            else {
+                command.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((ФамилияТренера == null)) {
+                command.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[5].Value = ((string)(ФамилияТренера));
+            }
+            if ((ИмяТренера == null)) {
+                command.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[6].Value = ((string)(ИмяТренера));
+            }
+            if ((Отчествотренера == null)) {
+                command.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[7].Value = ((string)(Отчествотренера));
+            }
+            if ((Страна == null)) {
+                throw new global::System.ArgumentNullException("Страна");
+            }
+            else {
+                command.Parameters[8].Value = ((string)(Страна));
+            }
+            if ((Рейтинг1Года.HasValue == true)) {
+                command.Parameters[9].Value = ((decimal)(Рейтинг1Года.Value));
+            }
+            else {
+                command.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            if ((Рейтинг2Года.HasValue == true)) {
+                command.Parameters[10].Value = ((decimal)(Рейтинг2Года.Value));
+            }
+            else {
+                command.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            if ((Рейтинг3Года.HasValue == true)) {
+                command.Parameters[11].Value = ((decimal)(Рейтинг3Года.Value));
+            }
+            else {
+                command.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            if ((Рейтинг4Года.HasValue == true)) {
+                command.Parameters[12].Value = ((decimal)(Рейтинг4Года.Value));
+            }
+            else {
+                command.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            if ((Рейтинг5Года.HasValue == true)) {
+                command.Parameters[13].Value = ((decimal)(Рейтинг5Года.Value));
+            }
+            else {
+                command.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
         }
     }
     

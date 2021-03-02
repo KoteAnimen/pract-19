@@ -35,7 +35,9 @@ namespace pract_19
 
         private void AddRecords_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "tennisDataSet.Теннесисты". При необходимости она может быть перемещена или удалена.            
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "tennisDataSet.Теннесисты". При необходимости она может быть перемещена или удалена.
+            this.теннесистыTableAdapter.Fill(this.tennisDataSet.Теннесисты);
+            this.теннесистыBindingSource.AddNew();
         }
 
         private void AddButton_Click(object sender, EventArgs e)

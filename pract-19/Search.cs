@@ -33,6 +33,7 @@ namespace pract_19
         {
             // TODO: данная строка кода позволяет загрузить данные в таблицу "tennisDataSet.Теннесисты". При необходимости она может быть перемещена или удалена.
             this.теннесистыTableAdapter.Fill(this.tennisDataSet.Теннесисты);
+            Id.id = "";
 
         }
 
@@ -41,7 +42,8 @@ namespace pract_19
             index = теннесистыBindingSource.Find("Фамилия", family.Text);
             if (index > -1)
             {
-                теннесистыBindingSource.Position = index;                
+                теннесистыBindingSource.Position = index;
+                Id.id = family.Text;
                 Close();
             } 
             else MessageBox.Show("Ничего не найдено.");

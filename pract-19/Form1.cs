@@ -35,19 +35,23 @@ namespace pract_19
         private void AddRecord_Click(object sender, EventArgs e)
         {
             AddRecords records = new AddRecords();
-            records.ShowDialog();
-            int row, col;
-            row = теннесистыDataGridView.CurrentCell.RowIndex;
-            col = теннесистыDataGridView.CurrentCell.ColumnIndex;
-            this.теннесистыTableAdapter.Fill(this.tennisDataSet.Теннесисты);
-            теннесистыDataGridView.CurrentCell = теннесистыDataGridView[col, row];
+            records.ShowDialog();            
+            this.теннесистыTableAdapter.Fill(this.tennisDataSet.Теннесисты);            
         }
 
         private void SearchChange_Click(object sender, EventArgs e)
         {
             Search search = new Search();
             search.ShowDialog();
-            теннесистыDataGridView.Rows[search.index].Selected = true;
+            теннесистыDataGridView.Rows[search.index].Selected = true;            
+            ChangeRecord change = new ChangeRecord();
+            change.ShowDialog();
+            this.теннесистыTableAdapter.Fill(this.tennisDataSet.Теннесисты);
         }
+    }
+
+    public static class Id
+    {
+        public static string id;
     }
 }
