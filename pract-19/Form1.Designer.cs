@@ -41,6 +41,8 @@
             this.AboutUs = new System.Windows.Forms.ToolStripMenuItem();
             this.теннесистыBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.теннесистыBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tennisDataSet = new pract_19.TennisDataSet();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -67,16 +69,14 @@
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.теннесистыBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tennisDataSet = new pract_19.TennisDataSet();
             this.теннесистыTableAdapter = new pract_19.TennisDataSetTableAdapters.ТеннесистыTableAdapter();
             this.tableAdapterManager = new pract_19.TennisDataSetTableAdapters.TableAdapterManager();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.теннесистыBindingNavigator)).BeginInit();
             this.теннесистыBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.теннесистыDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.теннесистыBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tennisDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.теннесистыDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -121,18 +121,21 @@
             this.DeleteRecord.Name = "DeleteRecord";
             this.DeleteRecord.Size = new System.Drawing.Size(189, 22);
             this.DeleteRecord.Text = "Удалить запись";
+            this.DeleteRecord.Click += new System.EventHandler(this.DeleteRecord_Click);
             // 
             // CountWoman
             // 
             this.CountWoman.Name = "CountWoman";
             this.CountWoman.Size = new System.Drawing.Size(189, 22);
             this.CountWoman.Text = "Количество женщин";
+            this.CountWoman.Click += new System.EventHandler(this.CountWoman_Click);
             // 
             // CountMan
             // 
             this.CountMan.Name = "CountMan";
             this.CountMan.Size = new System.Drawing.Size(189, 22);
             this.CountMan.Text = "Количество мужчин";
+            this.CountMan.Click += new System.EventHandler(this.CountMan_Click);
             // 
             // справкаToolStripMenuItem
             // 
@@ -186,6 +189,16 @@
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorAddNewItem.Text = "Добавить";
+            // 
+            // теннесистыBindingSource
+            // 
+            this.теннесистыBindingSource.DataMember = "Теннесисты";
+            this.теннесистыBindingSource.DataSource = this.tennisDataSet;
+            // 
+            // tennisDataSet
+            // 
+            this.tennisDataSet.DataSetName = "TennisDataSet";
+            this.tennisDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bindingNavigatorCountItem
             // 
@@ -401,16 +414,6 @@
             this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
             this.dataGridViewTextBoxColumn14.ReadOnly = true;
             // 
-            // теннесистыBindingSource
-            // 
-            this.теннесистыBindingSource.DataMember = "Теннесисты";
-            this.теннесистыBindingSource.DataSource = this.tennisDataSet;
-            // 
-            // tennisDataSet
-            // 
-            this.tennisDataSet.DataSetName = "TennisDataSet";
-            this.tennisDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // теннесистыTableAdapter
             // 
             this.теннесистыTableAdapter.ClearBeforeFill = true;
@@ -439,9 +442,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.теннесистыBindingNavigator)).EndInit();
             this.теннесистыBindingNavigator.ResumeLayout(false);
             this.теннесистыBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.теннесистыDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.теннесистыBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tennisDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.теннесистыDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -48,6 +48,43 @@ namespace pract_19
             change.ShowDialog();
             this.теннесистыTableAdapter.Fill(this.tennisDataSet.Теннесисты);
         }
+
+        private void DeleteRecord_Click(object sender, EventArgs e)
+        {
+            DialogResult result;
+            result = MessageBox.Show("Удаление записи", "Подтвердите удаление записи", MessageBoxButtons.YesNo);
+            if(result == DialogResult.Yes)
+            {
+                теннесистыBindingSource.RemoveCurrent();
+                теннесистыTableAdapter.Update(this.tennisDataSet.Теннесисты);
+            }
+        }
+
+        private void CountWoman_Click(object sender, EventArgs e)
+        {
+            int count = 0;
+            for(int i = 0; i < теннесистыDataGridView.RowCount; i++)
+            {
+                if(Convert.ToString(теннесистыDataGridView[3, i].Value) == "Жен")
+                {
+                    count++;
+                }
+            }
+            MessageBox.Show("Количество женщин = " + count, "Количество женщин");
+        }
+
+        private void CountMan_Click(object sender, EventArgs e)
+        {
+            int count = 0;
+            for (int i = 0; i < теннесистыDataGridView.RowCount; i++)
+            {
+                if (Convert.ToString(теннесистыDataGridView[3, i].Value) == "Муж")
+                {
+                    count++;                    
+                }
+            }
+            MessageBox.Show("Количество мужчин = " + count, "Количество мужчин");
+        }
     }
 
     public static class Id
