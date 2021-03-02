@@ -45,11 +45,12 @@ namespace pract_19
             фамилияТренераTextBox.Text = tennisDataSet.Теннесисты.Rows[0][5].ToString();
             имяТренераTextBox.Text = tennisDataSet.Теннесисты.Rows[0][6].ToString();
             отчествотренераTextBox.Text = tennisDataSet.Теннесисты.Rows[0][7].ToString();
-            рейтинг1ГодаTextBox.Text = tennisDataSet.Теннесисты.Rows[0][8].ToString();
-            рейтинг2ГодаTextBox.Text = tennisDataSet.Теннесисты.Rows[0][9].ToString();
-            рейтинг3ГодаTextBox.Text = tennisDataSet.Теннесисты.Rows[0][10].ToString();
-            рейтинг4ГодаTextBox.Text = tennisDataSet.Теннесисты.Rows[0][11].ToString();
-            рейтинг5ГодаTextBox.Text = tennisDataSet.Теннесисты.Rows[0][12].ToString();
+            странаTextBox.Text = tennisDataSet.Теннесисты.Rows[0][8].ToString();
+            рейтинг1ГодаTextBox.Text = tennisDataSet.Теннесисты.Rows[0][9].ToString();
+            рейтинг2ГодаTextBox.Text = tennisDataSet.Теннесисты.Rows[0][10].ToString();
+            рейтинг3ГодаTextBox.Text = tennisDataSet.Теннесисты.Rows[0][11].ToString();
+            рейтинг4ГодаTextBox.Text = tennisDataSet.Теннесисты.Rows[0][12].ToString();
+            рейтинг5ГодаTextBox.Text = tennisDataSet.Теннесисты.Rows[0][13].ToString();
         }
 
         private void ChangeButton_Click(object sender, EventArgs e)
