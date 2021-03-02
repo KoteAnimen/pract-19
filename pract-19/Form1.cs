@@ -53,11 +53,19 @@ namespace pract_19
         {
             DialogResult result;
             result = MessageBox.Show("Удаление записи", "Подтвердите удаление записи", MessageBoxButtons.YesNo);
-            if(result == DialogResult.Yes)
-            {
-                теннесистыBindingSource.RemoveCurrent();
-                теннесистыTableAdapter.Update(this.tennisDataSet.Теннесисты);
+            try
+            {                
+                if (result == DialogResult.Yes)
+                {
+                    теннесистыBindingSource.RemoveCurrent();
+                    теннесистыTableAdapter.Update(this.tennisDataSet.Теннесисты);
+                }
             }
+            catch
+            {
+                MessageBox.Show("Таблица пуста", "Ошибка");
+            }
+            
         }
 
         private void CountWoman_Click(object sender, EventArgs e)
