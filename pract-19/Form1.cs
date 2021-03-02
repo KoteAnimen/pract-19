@@ -85,6 +85,12 @@ namespace pract_19
             }
             MessageBox.Show("Количество мужчин = " + count, "Количество мужчин");
         }
+
+        private void AboutUs_Click(object sender, EventArgs e)
+        {
+            AboutBox about = new AboutBox();
+            about.Show();
+        }
     }
 
     public static class Id

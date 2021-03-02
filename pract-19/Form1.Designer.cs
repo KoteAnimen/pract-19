@@ -148,8 +148,9 @@
             // AboutUs
             // 
             this.AboutUs.Name = "AboutUs";
-            this.AboutUs.Size = new System.Drawing.Size(149, 22);
+            this.AboutUs.Size = new System.Drawing.Size(180, 22);
             this.AboutUs.Text = "О программе";
+            this.AboutUs.Click += new System.EventHandler(this.AboutUs_Click);
             // 
             // теннесистыBindingNavigator
             // 
@@ -432,9 +433,10 @@
             this.Controls.Add(this.теннесистыDataGridView);
             this.Controls.Add(this.теннесистыBindingNavigator);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Практическая №19";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
